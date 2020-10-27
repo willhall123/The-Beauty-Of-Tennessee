@@ -1,0 +1,89 @@
+body {
+  background-image: url(https://i.pinimg.com/originals/dc/4e/04/dc4e044379472b0b484828ac9e9a69f5.jpg);
+}
+.title-header {
+  -webkit-text-stroke: 2px Black;
+  color: rgb(189, 123, 0);
+  font-weight: 800;
+  font-size: 100px;
+  margin-top: 20px;
+}
+.sub-title-header {
+  -webkit-text-stroke: 2px Black;
+  color: rgb(189, 123, 0);
+  font-weight: 600;
+  font-size: 40px;
+  margin-left: 1%;
+}
+.accounts-page-button {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
+.home-button {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
+.email-input-form {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
+.password-input-form {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
+.log-in-button {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
+.create-account-button {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
