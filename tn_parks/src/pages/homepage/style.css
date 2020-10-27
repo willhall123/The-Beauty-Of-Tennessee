@@ -1,193 +1,89 @@
 body {
-  background-image: url(https://imgc.artprintimages.com/img/print/gatlinburg-tn-great-smoky-mountains-national-park-scenic-sunset-landscape-vacation-getaway-destinat_u-l-q19xowe0.jpg?h=550&p=0&w=550&background=fbfbfb);
+  background-image: url(https://i.pinimg.com/originals/dc/4e/04/dc4e044379472b0b484828ac9e9a69f5.jpg);
 }
-
-.leaflet-container {
-  height: 240px;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 50px;
-  border-style: double;
-  box-shadow: 20px;
-  opacity: 0.7;
-  border-radius: 0px;
-}
-
-.re-captcha-widget {
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 10%;
-  opacity: 0.7;
-}
-
 .title-header {
+  -webkit-text-stroke: 2px Black;
+  color: rgb(189, 123, 0);
   font-weight: 800;
-  font-family: "Nothing You Could Do", cursive;
   font-size: 100px;
+  margin-top: 20px;
 }
-
 .sub-title-header {
+  -webkit-text-stroke: 2px Black;
+  color: rgb(189, 123, 0);
   font-weight: 600;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 23px;
+  font-size: 40px;
+  margin-left: 1%;
 }
-
-.jumbotron {
-  color: black;
-  text-align: center;
-  opacity: 0.4;
-}
-
-.find-a-walk-button {
-  background-color: white;
-  color: black;
-  border-style: solid;
-  border-color: black;
-  font-weight: 600;
-  opacity: 0.5;
-  width: 90%;
-  margin-left: 5%;
-  height: 80px;
-  margin-top: 10px;
-  border-radius: 0px;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 50px;
-}
-
-.add-new-walk-button {
-  background-color: white;
-  color: black;
-  border-style: solid;
-  border-color: black;
-  font-weight: 600;
-  opacity: 0.5;
-  width: 90%;
-  margin-left: 5%;
-  height: 80px;
-  margin-top: 30px;
-  border-radius: 0px;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 50px;
-}
-
 .accounts-page-button {
   background-color: white;
   color: black;
   border-style: solid;
   border-color: black;
   font-weight: 600;
-  opacity: 0.5;
-  width: 60%;
-  margin-left: 20%;
-  height: 60px;
-  margin-top: 250px;
-  border-radius: 40px;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 30px;
-}
-
-
-.add-walk-form-one {
-  background-color: white;
-  color: black;
-  border-style: solid;
-  border-color: black;
-  font-weight: 600;
-  opacity: 0.5;
-  width: 90%;
-  margin-left: 5%;
+  width: 50%;
+  margin-left: 25%;
   height: 50px;
-  margin-top: 80px;
+  margin-top: 50px;
   border-radius: 0px;
 }
-
-.submit-selected-walk-button {
-  background-color: white;
-  color: black;
-  border-style: solid;
-  border-color: black;
-  font-weight: 600;
-  opacity: 0.5;
-  width: 90%;
-  margin-left: 5%;
-  height: 80px;
-  margin-top: 110px;
-  border-radius: 0px;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 28px;
-}
-
 .home-button {
   background-color: white;
   color: black;
   border-style: solid;
   border-color: black;
   font-weight: 600;
-  opacity: 0.5;
-  width: 60%;
-  margin-left: 20%;
+  width: 50%;
+  margin-left: 25%;
   height: 50px;
-  margin-top: 70px;
-  border-radius: 40px;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 20px;
-}
-
-.create-walk-text-input {
-  background-color: white;
-  color: black;
-  border-style: solid;
-  border-color: black;
-  font-weight: 300;
-  font-size: 2ch;
-  opacity: 0.5;
-  width: 90%;
-  margin-left: 5%;
-  height: 50px;
-  margin-top: 20px;
+  margin-top: 50px;
   border-radius: 0px;
 }
-
-.create-new-walk-button {
-  background-color: white;
-  color: black;
-  border-style: solid;
-  border-color: black;
-  font-weight: 600;
-  opacity: 0.5;
-  width: 90%;
-  margin-left: 5%;
-  height: 80px;
-  margin-top: 110px;
-  border-radius: 0px;
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 50px;
-}
-
 .email-input-form {
   background-color: white;
   color: black;
   border-style: solid;
   border-color: black;
   font-weight: 600;
-  opacity: 0.5;
-  width: 90%;
-  margin-left: 5%;
+  width: 50%;
+  margin-left: 25%;
   height: 50px;
-  margin-top: 80px;
+  margin-top: 50px;
   border-radius: 0px;
 }
-
 .password-input-form {
   background-color: white;
   color: black;
   border-style: solid;
   border-color: black;
   font-weight: 600;
-  opacity: 0.5;
-  width: 90%;
-  margin-left: 5%;
+  width: 50%;
+  margin-left: 25%;
   height: 50px;
-  margin-top: 80px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
+.log-in-button {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
+.create-account-button {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
   border-radius: 0px;
 }
