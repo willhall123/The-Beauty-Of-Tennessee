@@ -1,0 +1,39 @@
+body {
+    background-image: url(https://imgc.artprintimages.com/img/print/gatlinburg-tn-great-smoky-mountains-national-park-scenic-sunset-landscape-vacation-getaway-destinat_u-l-q19xowe0.jpg?h=550&p=0&w=550&background=fbfbfb);
+  }
+  
+  .leaflet-container {
+    height: 240px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    border-style: double;
+    box-shadow: 20px;
+    opacity: 0.7;
+    border-radius: 0px;
+  }
+  
+  .re-captcha-widget {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    opacity: 0.7;
+  }
+  
+  .title-header {
+    font-weight: 800;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 100px;
+  }
+  
+  .sub-title-header {
+    font-weight: 600;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 23px;
+  }
+  
+  .jumbotron {
+    color: black;
+    text-align: center;
+    opacity: 0.4;
+  }
