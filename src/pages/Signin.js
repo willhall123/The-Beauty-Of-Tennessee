@@ -1,16 +1,17 @@
 import React from "react";
-import SigninForm from "../components/LoginForm";
+import SignupForm from "../components/LoginForm";
 import HomeButton from "../components/HomeButton";
 import { Link } from "react-router-dom";
 
-function Signin() {
+function signup() {
   return (
     <div>
-      <SigninForm />
+      <SignupForm />
       <Link to="/">
         <HomeButton />
       </Link>
     </div>
   );
 }
-export default Signin;
+
+export default signup;
