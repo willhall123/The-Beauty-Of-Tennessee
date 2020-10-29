@@ -1,5 +1,5 @@
 import React from "react";
-import SignupForm from "../components/createAccount";
+import SignupForm from "../components/createaccount";
 import HomeButton from "../components/HomeButton";
 import { Link } from "react-router-dom";
 

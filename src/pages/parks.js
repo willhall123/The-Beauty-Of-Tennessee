@@ -1,12 +1,10 @@
 import React from "react";
-import SignupForm from "../components/loginform";
-import HomeButton from "../components/HomeButton";
 import { Link } from "react-router-dom";
+import HomeButton from "../components/HomeButton";
 
-function signup() {
+function parks() {
   return (
     <div>
-      <SignupForm />
       <Link to="/">
         <HomeButton />
       </Link>
@@ -14,4 +12,4 @@ function signup() {
   );
 }
 
-export default signup;
+export default parks;
