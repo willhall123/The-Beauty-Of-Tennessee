@@ -11,12 +11,19 @@ function HomePage() {
           <p className="lead sub-title-header">Explore TN parks</p>
         </div>
       
-      <Link to="Accounts">
-        <button
-          type="button"
-          className="btn btn-secondary btn-lg accounts-page-button"
-        >
+      <Link to="accounts">
+        <button type="button" className="btn btn-secondary btn-lg accounts-page-button">
           Sign Up / Log In
+        </button>
+      </Link>
+      <Link to="parks">
+        <button type="button" className="btn btn-secondary btn-lg find-park-button">
+          Select Park
+        </button>
+      </Link>
+      <Link to="members">
+        <button type="button" className="btn btn-secondary btn-lg members-page-button">
+          Members
         </button>
       </Link>
     </div>

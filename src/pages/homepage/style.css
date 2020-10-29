@@ -32,6 +32,30 @@ body {
   margin-top: 50px;
   border-radius: 0px;
 }
+.find-park-button {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
+.members-page-button {
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 50px;
+  border-radius: 0px;
+}
 .home-button {
   background-color: white;
   color: black;
