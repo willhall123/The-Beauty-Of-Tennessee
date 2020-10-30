@@ -1,8 +1,11 @@
 ## The-Beauty-Of-Tennessee
 
--Beauty of Tennessee (Final Project)
+## Beauty of Tennessee (Final Project)
 
--Description
+Welcome To The Park
+
+## Description
+
 This app designed to help you find parks.
 
 -Screenshots
@@ -11,13 +14,42 @@ This app designed to help you find parks.
 
 -sign up page
 
--login 
+-login
 
 -City and parks page
 
--Installation
+## Installation
+
+- npm install
 
 -Built With
 
--License
-Copyright (c) [2020] Nader mashy, Will Hall and Jonathan Austin
+- React
+
+- HTML
+
+- CSS
+
+- Node.js
+
+- Express.js
+
+- jQuery
+
+- AJAX
+
+- Javascript
+
+- MongoDB / Mongoose
+
+- Google Maps API
+
+## License
+
+Copyright (c) [2020]
+
+- Jonathan Austin
+
+- Nader mashy
+
+- Will Hall
