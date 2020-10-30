@@ -1,10 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import HomeButton from "../components/HomeButton";
+import React from 'react';
+import logo from './logo.svg';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 
-function parks(props) {
+function map(props) {
 
   const onMarkerClick = (e) => {
     console.log(e);
@@ -15,11 +14,10 @@ function parks(props) {
   }; 
 
   return (
-    <div>
-        <Link to="/">
-          <HomeButton />
-        </Link>
-        <div className="finder">
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
       <Map google={props.google} zoom={14}>
  
         <Marker onClick={onMarkerClick}
@@ -30,12 +28,9 @@ function parks(props) {
         </InfoWindow>
       </Map>
     </div>
-      </div>
-    
-    
   );
 }
 
 export default GoogleApiWrapper({
   apiKey: ('AIzaSyCbXKd1TQJbyiDsxjq4mzq3dSino4c3EkA')
-})(parks)
+})(map)
