@@ -19,18 +19,15 @@ function parks(props) {
         <Link to="/">
           <HomeButton />
         </Link>
-        <div className="finder">
-      <Map google={props.google} zoom={14}>
- 
-        <Marker onClick={onMarkerClick}
+      <div className="finder">
+        <Map google={props.google} zoom={14}>
+          <Marker onClick={onMarkerClick}
                 name={'Current location'} />
- 
-        <InfoWindow onClose={onInfoWindowClose}>
-          
-        </InfoWindow>
-      </Map>
-    </div>
+          <InfoWindow onClose={onInfoWindowClose}>
+          </InfoWindow>
+        </Map>
       </div>
+    </div>
   );
 }
 
