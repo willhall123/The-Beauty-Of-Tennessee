@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+
 function parks(props) {
   const onMarkerClick = (e) => {
     console.log(e);
