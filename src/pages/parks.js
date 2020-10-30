@@ -31,8 +31,6 @@ function parks(props) {
       </Map>
     </div>
       </div>
-    
-    
   );
 }
 
