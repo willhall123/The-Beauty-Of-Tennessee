@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-
 function parks(props) {
   const onMarkerClick = (e) => {
     console.log(e);
@@ -10,7 +9,11 @@ function parks(props) {
   const onInfoWindowClose = (e) => {
     console.log(e);
   };
-
+  const mapStyles = {
+    width: "70%",
+    height: "70%",
+    margin: "auto",
+  };
   return (
     <div>
       <div>
@@ -38,7 +41,8 @@ function parks(props) {
         </div>
       </form>
       <div className="finder">
-        <Map google={props.google} zoom={14}>
+        <Map google={props.google} zoom={14} style={mapStyles}
+        initialCenter={{ lat: 9.761927, lng: 79.95244 }}>
           <Marker onClick={onMarkerClick}
             name={'Current location'} />
           <InfoWindow onClose={onInfoWindowClose}>
@@ -48,7 +52,6 @@ function parks(props) {
     </div>
   );
 }
-
 export default GoogleApiWrapper({
   apiKey: ('AIzaSyCbXKd1TQJbyiDsxjq4mzq3dSino4c3EkA')
 })(parks)
