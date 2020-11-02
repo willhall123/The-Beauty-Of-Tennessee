@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export default class LogInForm extends Component {
+export default class loginform extends Component {
   constructor(props) {
     super(props);
 
     this.emailAddressInput = this.emailAddressInput.bind(this);
     this.passwordInput = this.passwordInput.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
-
-    this.state = {
-      isVerified: false
-    };
   }
 
   state = {
@@ -42,14 +37,6 @@ export default class LogInForm extends Component {
         .then(res => console.log(res.data));
 
       window.location = "/";
-  }
-
-  verifyCallback(response) {
-    if (response) {
-      this.setState({
-        isVerified: true
-      });
-    }
   }
 
   render() {
