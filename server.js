@@ -1,7 +1,9 @@
 const express = require("express");
 const path = require("path");
+const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
+require('dotenv').config();
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -16,4 +18,12 @@ app.get("*", function(req, res) {
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
+});
+
+//connect to mongoDB
+const uri = "mongodb+srv://JonAustin:WomboCombo_64@cluster0.cmcdu.mongodb.net/final?retryWrites=true&w=majority";
+console.log(uri);
+mongoose.connect(uri, {
+  useCreateIndex: true,
+  useNewUrlParser: true
 });
