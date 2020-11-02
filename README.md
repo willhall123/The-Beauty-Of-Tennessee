@@ -2,27 +2,22 @@
 
 ## Beauty of Tennessee (Final Project)
 
-Welcome To The Park
-
 ## Description
 
 This app designed to help you find parks.
 
--Screenshots
+## Screenshots
 
 -Homepage
+![Homepage](./public/img/Homepage.PNG)
 
 -sign up page
-
--login
+![Loginpage](./public/img/Loginpage.PNG)
 
 -City and parks page
+![park-city](./public/img/park-city.PNG)
 
-## Installation
-
-- npm install
-
--Built With
+## Technology
 
 - React
 
