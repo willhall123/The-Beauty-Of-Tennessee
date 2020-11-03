@@ -15,7 +15,7 @@ You are able to find parks in the Nashville area and see what parks other users 
 ![Loginpage](./public/img/Loginpage.PNG)
 
 -City and parks page
-![park-city](./public/img/park-city.PNG)
+![parks](./public/img/parks.PNG)
 
 ## Technology
 
@@ -48,3 +48,5 @@ Copyright (c) [2020]
 - Nader mashy
 
 - Will Hall
+
+
