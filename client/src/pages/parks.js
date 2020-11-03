@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-
-
-
-function parks(props) {
+function Parks(props) {
+  const [newCenter, setCenter] = useState({});
   const onMarkerClick = (e) => {
     console.log(e);
   };
@@ -17,7 +15,6 @@ function parks(props) {
     height: "70%",
     margin: "auto",
   };
-
   return (
     <div>
       <div>
@@ -30,6 +27,7 @@ function parks(props) {
             type="submit"
             value="City Search"
             className="btn btn-primary city-button"
+            onClick={() => setCenter({lat: 36.1627, lng:-86.7816})}
           >
             Nashville
           </button>
@@ -38,6 +36,7 @@ function parks(props) {
             type="submit"
             value="City Search"
             className="btn btn-primary city-button"
+            onClick={() => setCenter({lat: 35.9606, lng:-83.9207})}
           >
             Knoxville
           </button>
@@ -46,13 +45,22 @@ function parks(props) {
             type="submit"
             value="City Search"
             className="btn btn-primary city-button"
+            onClick={() => setCenter({lat: 35.1495, lng:-90.0490})}
           >
             Memphis
           </button>
-
+          <button
+            name="Search City"
+            type="submit"
+            value="City Search"
+            className="btn btn-primary city-button"
+            onClick={() => setCenter({lat: 36.4276, lng:-84.9319})}
+          >
+            Jamestown
+          </button>
       <div className="finder">
         <Map google={props.google} zoom={14} style={mapStyles}
-          initialCenter={{ lat: 36.1627, lng: -86.7816 }}>
+          initialCenter={{ lat: 36.1627, lng: -86.7816 }} center={newCenter}>
           <Marker onClick={onMarkerClick}
             name={'Current location'} />
           <InfoWindow onClose={onInfoWindowClose}>
@@ -64,4 +72,4 @@ function parks(props) {
 }
 export default GoogleApiWrapper({
   apiKey: ('AIzaSyCbXKd1TQJbyiDsxjq4mzq3dSino4c3EkA')
-})(parks)
+})(Parks)
