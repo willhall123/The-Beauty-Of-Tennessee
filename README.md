@@ -4,7 +4,7 @@
 
 ## Description
 
-This app designed to help you find parks.
+You are able to find parks in the Nashville area and see what parks other users recommend. The app is equipt with a map of Nashville with markers to indicate park location. 
 
 ## Screenshots
 
