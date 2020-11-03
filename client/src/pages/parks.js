@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
+
+
 function parks(props) {
   const onMarkerClick = (e) => {
     console.log(e);
@@ -15,6 +17,7 @@ function parks(props) {
     height: "70%",
     margin: "auto",
   };
+
   return (
     <div>
       <div>
@@ -22,28 +25,34 @@ function parks(props) {
           <HomeButton />
         </Link>
       </div>
-      <form>
-        <div className="form-group">
-          <input
-            type="input"
-            className="form-control email-input-form"
-            id=""
-            aria-describedby=""
-            placeholder="Enter City"
-          />
+      <button
+            name="Search City"
+            type="submit"
+            value="City Search"
+            className="btn btn-primary city-button"
+          >
+            Nashville
+          </button>
           <button
             name="Search City"
             type="submit"
             value="City Search"
-            className="btn btn-primary Find-Park-button"
+            className="btn btn-primary city-button"
           >
-            Find Parks
+            Knoxville
           </button>
-        </div>
-      </form>
+          <button
+            name="Search City"
+            type="submit"
+            value="City Search"
+            className="btn btn-primary city-button"
+          >
+            Memphis
+          </button>
+
       <div className="finder">
         <Map google={props.google} zoom={14} style={mapStyles}
-        initialCenter={{ lat: 9.761927, lng: 79.95244 }}>
+          initialCenter={{ lat: 36.1627, lng: -86.7816 }}>
           <Marker onClick={onMarkerClick}
             name={'Current location'} />
           <InfoWindow onClose={onInfoWindowClose}>

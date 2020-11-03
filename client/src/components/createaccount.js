@@ -32,11 +32,10 @@ export default class loginform extends Component {
         email: this.state.email,
         password: this.state.password
       };
+      console.log(createdAccount);
       axios
         .post("/api/addUser", createdAccount)
         .then(res => console.log(res.data));
-
-      window.location = "/";
   }
 
   render() {

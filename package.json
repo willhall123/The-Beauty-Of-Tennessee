@@ -28,8 +28,10 @@
     "axios": "^0.21.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "google-maps": "^4.3.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.10.11"
+    "mongoose": "^5.10.11",
+    "react-google-places-autocomplete": "^3.0.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
