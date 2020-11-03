@@ -15,7 +15,7 @@ This app designed to help you find parks.
 ![Loginpage](./public/img/Loginpage.PNG)
 
 -City and parks page
-![park-city](./public/img/park-city.PNG)
+![parks](./public/img/parks.PNG)
 
 ## Technology
 
@@ -48,3 +48,5 @@ Copyright (c) [2020]
 - Nader mashy
 
 - Will Hall
+
+
