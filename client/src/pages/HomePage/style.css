@@ -140,3 +140,29 @@ body {
   margin-top: 20px;
   border-radius: 0px;
 }
+
+.save-button {
+  background-color:white;
+  color:back;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 0px;
+}
+
+.othermembers-button {
+  background-color:white;
+  color:back;
+  border-style: solid;
+  border-color: black;
+  font-weight: 600;
+  width: 50%;
+  margin-left: 25%;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 0px;
+}

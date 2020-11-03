@@ -12,7 +12,7 @@ router.route("/api/Usercheck").post(async (req, res) => {
   if (foundUser !== null) {
     const actualPassword = foundUser.password; //assigning users password to 'actual password'
     if (suppliedPassword === actualPassword) {
-      return res.status(200).send(); //return 200 if supplied password matches actual password
+      return res.status(200).json(foundUser); //return 200 if supplied password matches actual password
     } else {
       return res.status(401).send(); //return 401 if above does not match
     }
@@ -41,10 +41,15 @@ router.post("/api/addUser", (req, res) => {
 
   newUser
     .save()
-    .then(() => res.json("New user now added!"))
+    .then((user) => res.json(user))
     .catch(err => res.status(400).json("error: " + err));
 });
 
+router.post("/api/users", (req, res) =>{
+  logIn.find({})
+  .then(users => res.json(users))
+  .catch(err => res.status(400).json("error: " + err));
+});
 //GET REQUEST
 router.route("/api/User/:id").get((req, res) => {
   logIn
@@ -70,6 +75,19 @@ router.route("/api/update/User/:id").post((req, res) => {
     login
       .save()
       .then(() => res.json("User updated!."))
+      .catch(err => escape.status(400).json("error: " + err));
+  });
+});
+
+router.route("/api/user/update/place/:id").post((req, res) => {
+  logIn.findById(req.params.id).then(user => {
+    user.coordinates = req.body.coordinates;
+    user.location = req.body.location;
+    console.log(user.coordinates);
+    console.log(user.location);
+    user
+      .save()
+      .then(() => res.json("User updated!"))
       .catch(err => escape.status(400).json("error: " + err));
   });
 });

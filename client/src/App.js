@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import axios from "axios";
 import HomePage from "./pages/HomePage/homepage";
@@ -6,20 +6,33 @@ import Accounts from "./pages/accounts";
 import "./pages/HomePage/style.css";
 import Signup from "./pages/signup";
 import Login from "./pages/signin";
-import members from "./pages/members";
-import parks from "./pages/parks";
+import Members from "./pages/members";
+import Parks from "./pages/parks";
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/accounts" component={Accounts} />
-          <Route path="/Signup" component={Signup} />
-          <Route path="/Login" component={Login} />
-          <Route path="/members" component={members} />
-          <Route path="/parks" component={parks} />
+          <Route exact path="/">
+            <HomePage user={user}/>
+          </Route>
+          <Route path="/accounts">
+          <Accounts user={user}/>
+          </Route>
+          <Route path="/Signup">
+          <Signup user={user} setUser={setUser}/>
+          </Route>
+          <Route path="/Login">
+          <Login user={user} setUser={setUser}/>
+          </Route>
+          <Route path="/members">
+          <Members user={user}/>
+          </Route>
+          <Route path="/parks">
+          <Parks user={user}/>
+          </Route>
         </Switch>
       </div>
     </Router>

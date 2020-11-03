@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {Redirect} from "react-router-dom";
 
 export default class loginform extends Component {
   constructor(props) {
@@ -27,18 +28,19 @@ export default class loginform extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-      alert("New account created.");
       const createdAccount = {
         email: this.state.email,
         password: this.state.password
       };
-      console.log(createdAccount);
       axios
         .post("/api/addUser", createdAccount)
-        .then(res => console.log(res.data));
+        .then(res =>  this.props.setUser(res.data));
   }
 
   render() {
+    if (this.props.user){
+      return <Redirect to={`/?email=${this.state.email}`}/>
+    }
     return (
       <div>
         <form onSubmit={this.onSubmit}>

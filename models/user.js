@@ -4,8 +4,10 @@ const Schema = mongoose.Schema;
 
 const logInForm = new Schema(
   {
-    email: { type: String, required: true },
-    password: { type: String, required: true }
+    email: { type: String, required: true, unique: true},
+    password: { type: String, required: true },
+    coordinates: { type: Object, required: false },
+    location: { type: String, required: false }
   },
   {
     timestamps: true

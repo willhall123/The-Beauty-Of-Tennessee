@@ -1,20 +1,39 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect }  from "react";
+import { Link, Redirect } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import axios from "axios";
+
 function Parks(props) {
-  const [newCenter, setCenter] = useState({});
-  const onMarkerClick = (e) => {
-    console.log(e);
-  };
+  const [center, setCenter] = useState({});
+  const [position, setPosition] = useState({});
+  const [name, setName] = useState("");
+  
+
   const onInfoWindowClose = (e) => {
-    console.log(e);
   };
   const mapStyles = {
     width: "70%",
     height: "70%",
     margin: "auto",
   };
+//---------------------------
+
+  const onSubmit  = (e) => {
+    e.preventDefault();
+    console.log("hitsubmite")
+    const data = {
+      coordinates: position,
+      location: name,
+    }
+      axios
+        .post("/api/user/update/place/"+props.user._id, data )
+        .then(res => console.log(res.data));
+  }
+  //------------------
+if (!props.user){
+  return <Redirect to="/"/>;
+}
   return (
     <div>
       <div>
@@ -22,49 +41,94 @@ function Parks(props) {
           <HomeButton />
         </Link>
       </div>
+      <Link to="members">
+          <button type="button" className="btn btn-secondary othermembers-button">
+            Members
+        </button>
+        </Link>
       <button
-            name="Search City"
+            name="Nash"
             type="submit"
             value="City Search"
             className="btn btn-primary city-button"
-            onClick={() => setCenter({lat: 36.1627, lng:-86.7816})}
+            onClick={() => {
+              setCenter({lat: 36.1627, lng: -86.7816});
+              setPosition({lat: 36.1627, lng: -86.7816});
+              setName("Chruch Street Park");
+            }}
           >
-            Nashville
+            Chruch Street Park
           </button>
           <button
-            name="Search City"
+            name="Nash"
             type="submit"
             value="City Search"
             className="btn btn-primary city-button"
-            onClick={() => setCenter({lat: 35.9606, lng:-83.9207})}
+            onClick={() => {
+              setCenter({lat: 36.1490, lng: -86.8120});
+              setPosition({lat: 36.1490, lng: -86.8120});
+              setName("Centennial Park");
+            }}
+
           >
-            Knoxville
+            Centennial Park
           </button>
           <button
-            name="Search City"
+            name="Nash"
             type="submit"
             value="City Search"
             className="btn btn-primary city-button"
-            onClick={() => setCenter({lat: 35.1495, lng:-90.0490})}
+            onClick={() => {
+              setCenter({lat: 36.1709, lng: -86.7876});
+              setPosition({lat: 36.1709, lng: -86.7876});
+              setName("Bicentennial Capitol Mall State Park");
+          }}
           >
-            Memphis
+            Bicentennial Capitol Mall State Park
           </button>
           <button
-            name="Search City"
+            name="Nash"
             type="submit"
             value="City Search"
             className="btn btn-primary city-button"
-            onClick={() => setCenter({lat: 36.4276, lng:-84.9319})}
+            onClick={() => {
+              setCenter({lat: 36.1624, lng: -86.7701});
+              setPosition({lat: 36.1624, lng: -86.7701});
+              setName("Cumberland Park");
+          }}
           >
-            Jamestown
+            Cumberland Park
           </button>
+          <button
+            name="Nash"
+            type="submit"
+            value="City Search"
+            className="btn btn-primary city-button"
+            onClick={() => {
+              setCenter({lat: 36.1875, lng: -86.6838});
+              setPosition({lat: 36.1875, lng: -86.6838});
+              setName("Two Rivers");
+            }}
+          >
+            Two Rivers
+          </button>
+
+          <button
+            name="Save"
+            type="submit"
+            value="City Search"
+            className="btn btn-primary save-button"
+            onClick={(e) => {
+              onSubmit(e);
+            }}
+          >
+            Save
+          </button>
+          
       <div className="finder">
-        <Map google={props.google} zoom={14} style={mapStyles}
-          initialCenter={{ lat: 36.1627, lng: -86.7816 }} center={newCenter}>
-          <Marker onClick={onMarkerClick}
-            name={'Current location'} />
-          <InfoWindow onClose={onInfoWindowClose}>
-          </InfoWindow>
+        <Map google={props.google} zoom={11} style={mapStyles}
+          initialCenter={{ lat: 36.1627, lng: -86.7816 }} center={center}>
+          <Marker position={position}/>
         </Map>
       </div>
     </div>

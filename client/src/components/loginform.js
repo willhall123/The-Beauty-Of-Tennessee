@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {Redirect} from "react-router-dom";
 
 export default class loginform extends Component {
   constructor(props) {
+    console.log(props);
     super(props);
 
     this.emailAddressInput = this.emailAddressInput.bind(this);
@@ -33,17 +35,22 @@ export default class loginform extends Component {
       email: this.state.email,
       password: this.state.password
     };
-    console.log(retrievedAccount);
     axios
       .post("api/Usercheck", retrievedAccount)
-      .then(res => (window.location = `/?email=${this.state.email}`))
+      .then(res => {
+        this.props.setUser(res.data);
+        //window.location = `/?email=${this.state.email}`;
+
+      })
       .catch(err => {
         this.setState({ loginError: true });
-        alert("Email or Password incorrect.");
       });
   }
 
-  render() {
+  render() { 
+    if (this.props.user){
+      return <Redirect to={`/?email=${this.state.email}`}/>
+    }
     return (
       <div>
         <form onSubmit={this.onSubmit}>
