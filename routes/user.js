@@ -1,23 +1,22 @@
 const router = require("express").Router();
-const logIn = require("../models/logIn");
+const logIn = require("../models/user");
 
 //POST REQUEST MATCHING USER INPUT DATA WITH DATABASE DATA
 router.route("/api/Usercheck").post(async (req, res) => {
-  const suppliedPassword = req.body.password; //passed down password from front end
-  const email = req.body.email; //passed down email from front end
+  const suppliedPassword = req.body.password; //sends password from front end
+  const email = req.body.email; //sends email from front end
 
-  const foundUser = await logIn.findOne({ email }); //finding user in db by matching given email address and storing in variable
+  const foundUser = await logIn.findOne({ email }); //finding user in db by matching email address and storing in variable
   console.log("I am the gfound user: ", foundUser);
 
   if (foundUser !== null) {
-    const actualPassword = foundUser.password; //assigning found users password to 'actual password'
+    const actualPassword = foundUser.password; //assigning users password to 'actual password'
     if (suppliedPassword === actualPassword) {
       return res.status(200).send(); //return 200 if supplied password matches actual password
     } else {
       return res.status(401).send(); //return 401 if above does not match
     }
   }
-
   return res.status(401).send();
 });
 
@@ -30,7 +29,8 @@ router.route("/api/User").get((req, res) => {
 });
 
 //POST REQUEST
-router.route("/api/addUser").post((req, res) => {
+router.post("/api/addUser", (req, res) => {
+  console.log(req.body);
   const email = req.body.email;
   const password = req.body.password;
 
