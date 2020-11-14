@@ -4,7 +4,10 @@
 
 ## Description
 
-You are able to find parks in the Nashville area and see what parks other users recommend. The app is equipt with a map of Nashville with markers to indicate park location. 
+You are able to find parks in the Nashville area and see what parks other users recommend. The app is equipt with a map of Nashville with markers to indicate park location.
+
+## Project URL
+### https://aqueous-oasis-90686.herokuapp.com/
 
 ## Screenshots
 
